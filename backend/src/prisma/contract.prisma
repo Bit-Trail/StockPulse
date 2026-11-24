@@ -1,0 +1,32 @@
+// use prisma-8
+
+
+model Product {
+  id                   Int      @id @default(autoincrement())
+  sku                  String   @unique
+  name                 String
+  price                Float    @default(0)
+  imageUrl             String?
+  current_stock        Int      @default(0)
+  lead_time_days       Int
+  safety_stock         Int      @default(0)
+  daily_sales_velocity Float    @default(0)
+  target_supply_days   Int      @default(14)
+  moq                  Int      @default(1)
+  createdAt            DateTime @default(now())
+}
+
+model Sale {
+  id           Int      @id @default(autoincrement())
+  productId    Int
+  quantitySold Int
+  soldAt       DateTime @default(now())
+}
+
+model PurchaseOrder {
+  id              Int      @id @default(autoincrement())
+  productId       Int
+  quantityOrdered Int
+  status          String   @default("PENDING")
+  createdAt       DateTime @default(now())
+}

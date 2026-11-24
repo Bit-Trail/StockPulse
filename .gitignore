@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+backend/.agents/
+backend/.claude/
+backend/.devin/
+
+# Environment & secret files (NEVER push to GitHub)
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Build & generated artifacts
+dist/
+build/
+.vite/
+frontend/dist/
+backend/dist/
+
+# Logs & OS junk
+*.log
+npm-debug.log*
+.DS_Store
