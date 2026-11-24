@@ -1,4 +1,4 @@
-# [StockPulse](https://stockpulse.vercel.app)
+# [StockPulse](https://stockpulse-beta-blond.vercel.app/)
 
 > **StockPulse — Real-time retail inventory and automated supplier restocking system that tracks live sales velocity, triggers purchase orders before stockouts, and parses supplier price sheets with AI.**
 
